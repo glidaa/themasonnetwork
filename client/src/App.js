@@ -28,8 +28,9 @@ function App() {
   },[currentJoke])
 
   return (
-    <div className="App" style={{height:"100vh"}}>
+    <div className="App" style={{height:"100vh",backgroundImage:`url(${jokes[currentJoke].imageUrl})`,backgroundSize:"cover",backgroundPosition:"center"}}>
       <ThemeProvider theme={theme}>
+        <div style={{}}></div>
         <Navbar />
         <JokeCard joke={jokes[currentJoke]} setCurrentJoke={setCurrentJoke} currentJoke={currentJoke} maxJokes={jokes.length}/>
         <Footer />
