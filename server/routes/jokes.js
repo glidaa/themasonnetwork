@@ -1,8 +1,8 @@
 const express = require("express");
-const {getJoke} = require("../controllers/jokes.js");
+const {getAllJokes} = require("../controllers/jokes.js");
 
 const router = express.Router();
 
-router.get("/", getJoke);
+router.get("/", getAllJokes);
 
 module.exports = router;
