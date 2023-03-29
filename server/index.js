@@ -43,20 +43,21 @@ cron.schedule("0 0 * * *", async() => {
         response.data.articles.map(async (article)=>{
             const chatGPTResponse = await openai.createChatCompletion({
                 model: "gpt-3.5-turbo",
-                messages: [{"role": "user", "content": "Create a funny headline based on the news : " + response.data.articles[0].title }],
+                messages: [{"role": "user", "content": "Create a funny headline based on the news : " + article.title }],
                 max_tokens: 20,
                 temperature: 0.7,
             })
+            
             const news = new News({
-                title:article.title,
-                author:article.author,
-                description:article.description,
-                url:article.url,
-                imageUrl:article.urlToImage,
+                title:article.title  || "undefined",
+                author:article.author || "undefined",
+                description:article.description || "undefined",
+                url:article.url || "undefined",
+                imageUrl:article.urlToImage || "undefined",
                 joke:chatGPTResponse.data.choices[0].message.content,
-                content:article.content,
-                source:article.source.name,
-                publishedAt:article.publishedAt
+                content:article.content || "undefined",
+                source:article.source.name || "unfined",
+                publishedAt:article.publishedAt || "undefined"
             })
             news.save();
         })
