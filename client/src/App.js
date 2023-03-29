@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import { createTheme,ThemeProvider } from '@mui/material';
 import axios from 'axios';
 import JokeCard from './components/JokeCard';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -27,10 +28,11 @@ function App() {
   },[currentJoke])
 
   return (
-    <div className="App">
+    <div className="App" style={{height:"100vh"}}>
       <ThemeProvider theme={theme}>
         <Navbar />
         <JokeCard joke={jokes[currentJoke]} setCurrentJoke={setCurrentJoke} currentJoke={currentJoke} maxJokes={jokes.length}/>
+        <Footer />
       </ThemeProvider>
     </div>
   );
