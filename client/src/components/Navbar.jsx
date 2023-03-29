@@ -6,7 +6,7 @@ const Navbar = () => {
         <nav>
             <AppBar position="static" sx={{backgroundColor:"#03C988"}}>
                 <Toolbar>
-                    <Typography variant="h5" align='center' sx={{ flexGrow: 1,fontWeight:"bold" }} >
+                    <Typography variant="h4" align='center' sx={{ flexGrow: 1,fontWeight:"bold" }} >
                         <Link to="/" style={{textDecoration:"none", color:"white"}}>
                             The Mason Network
                         </Link>
