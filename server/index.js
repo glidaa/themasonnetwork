@@ -8,12 +8,14 @@ const cron = require("node-cron");
 const News = require("./models/News.js");
 const axios = require("axios");
 const {Configuration,OpenAIApi} = require("openai");
+const path = require("path");
 
 //server config
 const app = express();
 dotenv.config();
 
 //middlewares
+app.use(express.static(path.join(__dirname, "../client/build")))
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
