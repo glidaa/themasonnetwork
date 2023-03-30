@@ -15,7 +15,7 @@ const JokeCard = ({joke,setCurrentJoke,currentJoke,maxJokes}) => {
     
 
     return (
-        <Box sx={{maxWidth:"800px", m:"4rem auto",p:"2rem 3rem", backgroundColor:"rgb(255,255,255,0.95)",borderRadius:"15px"}}>
+        <Box sx={{maxWidth:"800px",m:"4rem auto",p:"2rem 3rem", backgroundColor:"rgb(255,255,255,0.95)",borderRadius:"15px"}}>
             <Typography variant='h4' sx={{color:"black"}}>{joke?.title}.</Typography>
             <Typography variant='h5' sx={{color:"black",pt:"1rem"}}>{joke?.joke}{joke?.joke[joke.joke.length -1] ==='"' ? null : '"'}</Typography>
             <Box sx={{display:"flex",justifyContent:"space-between",pt:"1.5rem",alignItems:"center"}}>
