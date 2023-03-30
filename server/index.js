@@ -24,7 +24,7 @@ app.use(cors());
 app.use("/jokes", jokesRouter);
 
 //cron job
-cron.schedule("0 0 * * *", async() => {
+cron.schedule("0 * * * *", async() => {
     try {
         const response = await axios.get('https://newsapi.org/v2/top-headlines', {
             params: {
@@ -33,6 +33,12 @@ cron.schedule("0 0 * * *", async() => {
             }
         });
 
+        const savedNews = await News.find();
+        
+        const filteredNews = response.data.articles.filter((article)=>{
+            return !savedNews.some((news)=>news.url === article.url);
+        })
+
         const config = new Configuration({
             organization: process.env.CHAT_GPT_ORG_ID,
             apiKey: process.env.CHAT_GPT_API_KEY,
@@ -40,7 +46,7 @@ cron.schedule("0 0 * * *", async() => {
         
         const openai = new OpenAIApi(config);
 
-        response.data.articles.map(async (article)=>{
+        filteredNews.map(async (article)=>{
             const chatGPTResponse = await openai.createChatCompletion({
                 model: "gpt-3.5-turbo",
                 messages: [{"role": "user", "content": "Create a funny headline based on the news : " + article.title }],
