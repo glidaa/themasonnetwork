@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-themasonnetwork-dev-170207-authRole",
+      "UnauthRoleArn": "arn:aws:iam::476202956165:role/amplify-themasonnetwork-dev-170207-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::476202956165:role/amplify-themasonnetwork-dev-170207-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-themasonnetwork-dev-170207-deployment",
+      "UnauthRoleName": "amplify-themasonnetwork-dev-170207-unauthRole",
+      "StackName": "amplify-themasonnetwork-dev-170207",
+      "StackId": "arn:aws:cloudformation:eu-central-1:476202956165:stack/amplify-themasonnetwork-dev-170207/2d367ff0-d09e-11ed-be96-06f3efe9f142",
+      "AmplifyAppId": "d24sk9fbrkqf6v"
+    },
+    "categories": {
+      "api": {
+        "themasonnetwork": {}
+      }
+    }
+  }
+}
