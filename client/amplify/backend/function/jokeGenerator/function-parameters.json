@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "api": {
+      "themasonnetwork": [
+        "Query",
+        "Mutation",
+        "Subscription"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "reactAppChatGptApiKey",
+      "environmentVariableName": "REACT_APP_CHAT_GPT_API_KEY"
+    },
+    {
+      "cloudFormationParameterName": "reactAppNewsApiKey",
+      "environmentVariableName": "REACT_APP_NEWS_API_KEY"
+    },
+    {
+      "cloudFormationParameterName": "reactAppChatGptOrgId",
+      "environmentVariableName": "REACT_APP_CHAT_GPT_ORG_ID"
+    }
+  ]
+}

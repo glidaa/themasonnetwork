@@ -14,6 +14,21 @@
     "categories": {
       "api": {
         "themasonnetwork": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d24sk9fbrkqf6v",
+          "type": "manual"
+        }
+      },
+      "function": {
+        "jokeGenerator": {
+          "reactAppChatGptApiKey": "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",
+          "reactAppNewsApiKey": "87d20ce947664190842c86b1a342b974",
+          "reactAppChatGptOrgId": "org-L7rUZivumBoXlhKNLqk3gkZA",
+          "deploymentBucketName": "amplify-themasonnetwork-dev-170207-deployment",
+          "s3Key": "amplify-builds/jokeGenerator-2b3550396d7573646d6b-build.zip"
+        }
       }
     }
   }

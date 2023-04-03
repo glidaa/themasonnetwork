@@ -16,5 +16,88 @@
       "providerPlugin": "awscloudformation",
       "service": "AppSync"
     }
+  },
+  "function": {
+    "jokeGenerator": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "themasonnetwork"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "providerPlugin": "awscloudformation",
+      "service": "amplifyhosting",
+      "type": "manual"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_jokeGenerator_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "jokeGenerator"
+        }
+      ]
+    },
+    "AMPLIFY_function_jokeGenerator_reactAppChatGptApiKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "jokeGenerator"
+        }
+      ]
+    },
+    "AMPLIFY_function_jokeGenerator_reactAppChatGptOrgId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "jokeGenerator"
+        }
+      ]
+    },
+    "AMPLIFY_function_jokeGenerator_reactAppNewsApiKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "jokeGenerator"
+        }
+      ]
+    },
+    "AMPLIFY_function_jokeGenerator_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "jokeGenerator"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_appId": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_type": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    }
   }
 }
