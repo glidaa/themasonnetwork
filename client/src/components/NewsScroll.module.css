@@ -1,0 +1,39 @@
+.newsTicker {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  .ticker {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .newsItemWrapper {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+    .newsItem {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #666;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      margin: 5px 0;
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0.5;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
