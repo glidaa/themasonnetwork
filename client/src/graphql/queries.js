@@ -19,7 +19,6 @@ export const getJokes = /* GraphQL */ `
     }
   }
 `;
-
 export const listJokes = /* GraphQL */ `
   query ListJokes(
     $filter: ModelJokesFilterInput

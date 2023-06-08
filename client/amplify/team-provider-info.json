@@ -51,8 +51,8 @@
           "reactAppChatGptApiKey": "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",
           "reactAppNewsApiKey": "87d20ce947664190842c86b1a342b974",
           "reactAppChatGptOrgId": "org-L7rUZivumBoXlhKNLqk3gkZA",
-          "deploymentBucketName": "amplify-themasonnetwork-dev-170207-deployment",
-          "s3Key": "amplify-builds/jokeGenerator-4f51784a673376765065-build.zip"
+          "deploymentBucketName": "amplify-themasonnetwork-main-151546-deployment",
+          "s3Key": "amplify-builds/jokeGenerator-794f632f6a6f674f6a74-build.zip"
         },
         "themasonnetwork": {}
       },
@@ -61,6 +61,9 @@
           "appId": "d1q6sm15sg4tbk",
           "type": "manual"
         }
+      },
+      "api": {
+        "themasonnetwork": {}
       }
     }
   }
