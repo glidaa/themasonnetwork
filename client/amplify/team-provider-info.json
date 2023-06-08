@@ -27,7 +27,39 @@
           "reactAppNewsApiKey": "87d20ce947664190842c86b1a342b974",
           "reactAppChatGptOrgId": "org-L7rUZivumBoXlhKNLqk3gkZA",
           "deploymentBucketName": "amplify-themasonnetwork-dev-170207-deployment",
-          "s3Key": "amplify-builds/jokeGenerator-2b3550396d7573646d6b-build.zip"
+          "s3Key": "amplify-builds/jokeGenerator-4f51784a673376765065-build.zip"
+        },
+        "themasonnetwork": {}
+      }
+    }
+  },
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-themasonnetwork-main-151546-authRole",
+      "UnauthRoleArn": "arn:aws:iam::476202956165:role/amplify-themasonnetwork-main-151546-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::476202956165:role/amplify-themasonnetwork-main-151546-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-themasonnetwork-main-151546-deployment",
+      "UnauthRoleName": "amplify-themasonnetwork-main-151546-unauthRole",
+      "StackName": "amplify-themasonnetwork-main-151546",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:476202956165:stack/amplify-themasonnetwork-main-151546/875ac480-05bb-11ee-b159-0a130488a4ae",
+      "AmplifyAppId": "d1q6sm15sg4tbk"
+    },
+    "categories": {
+      "function": {
+        "jokeGenerator": {
+          "reactAppChatGptApiKey": "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",
+          "reactAppNewsApiKey": "87d20ce947664190842c86b1a342b974",
+          "reactAppChatGptOrgId": "org-L7rUZivumBoXlhKNLqk3gkZA",
+          "deploymentBucketName": "amplify-themasonnetwork-dev-170207-deployment",
+          "s3Key": "amplify-builds/jokeGenerator-4f51784a673376765065-build.zip"
+        },
+        "themasonnetwork": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1q6sm15sg4tbk",
+          "type": "manual"
         }
       }
     }

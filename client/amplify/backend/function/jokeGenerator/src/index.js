@@ -89,12 +89,23 @@ const updateJokesMutation = `
   const createdJokes = [];
 
   try {
+    console.log("Fetching news from news API...");
     const response = await axios.get("https://newsapi.org/v2/top-headlines", {
-      params: {
-        country: "us",
-        apiKey: newsAPIKey,
-      },
+        params: {
+            country: "us",
+            apiKey: newsAPIKey,
+        },
     });
+
+    // Log the entire response from the news API
+    console.log("News API response:", JSON.stringify(response.data, null, 2));
+    
+    // ... rest of your code ...
+
+} catch (error) {
+    console.error("Error generating jokes:", error);
+}
+
     const jokesDataResponse = await fetch(graphqlEndpoint, {
         method: "POST",
         headers: {
@@ -107,6 +118,8 @@ const updateJokesMutation = `
         }),
       });
       const jokesData = await jokesDataResponse.json();
+       console.log('jokesData:', jokesData);
+
 
     const filteredNews = response.data.articles.filter((article) => {
       return !jokesData.data.listJokes.items.some(
